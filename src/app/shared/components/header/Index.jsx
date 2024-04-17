@@ -8,24 +8,19 @@ const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+    setSidebarOpen(!sidebarOpen)
     document.body.classList.toggle('sidebar-open')
   }
 
   return (
+
     <Container>
-      <img src={Logo} alt="Logo" />
       <FaBars onClick={toggleSidebar} />
+      <img src={Logo} alt="Logo" />
       {sidebarOpen && <Sidebar active={setSidebarOpen} />}
     </Container>
+    
   )
 }
 
 export default Header
-
-
-   // <header className={styles.header}>
-    //   <strong />
-    //  <img src={ourLogo} alt="Logotipo do Ourplan"
-    // </header>
-    

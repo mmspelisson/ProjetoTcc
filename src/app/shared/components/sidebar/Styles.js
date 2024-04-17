@@ -20,6 +20,15 @@ export const Container = styled.div`
     cursor: pointer;
   }
 
+  .sidebar-open {
+    overflow-x: hidden; 
+  }
+
+  .sidebar-open main {
+    transform: translateX(250px); 
+    transition: transform 0.3s ease; 
+  }
+
   @keyframes showSidebar {
     from {
       opacity: 0;
@@ -34,4 +43,5 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   margin-top: 100px;
+  
 `
