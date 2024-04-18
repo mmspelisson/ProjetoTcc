@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const FormWrapper = styled.div`
   width: 70%; 
   max-width: 1278px; 
-  height: 200px;
+  height: 150px;
   background-color: #E2E2E2;
   mix-blend-mode: pass-through;
   display: flex;
@@ -20,7 +20,7 @@ export const FormWrapper = styled.div`
   justify-content: center;
   padding: 20px;
   position: relative;
-  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid #D3D3D3;
   margin: auto;
   flex-grow: 1;

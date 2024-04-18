@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const FormWrapper = styled.div`
   width: 70%; 
   max-width: 1278px; 
-  height: 363px;
+  height: 430px;
   background-color: #E2E2E2;
   mix-blend-mode: pass-through;
   display: flex;
@@ -20,10 +20,10 @@ export const FormWrapper = styled.div`
   justify-content: center;
   padding: 20px;
   position: relative;
-  border-radius: 10px;
   border: 1px solid #D3D3D3;
   margin: auto;
   flex-grow: 1;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 `
 
 export const FormContainer = styled.form`
@@ -62,7 +62,7 @@ export const Select = styled.select`
   margin-left: 10px;
   background-color: #E2E2E2;
   border: 1px solid #AEAEAE;
-  /* border-radius: 5px; */
+  border-radius: 5px;
   color: #5A5A5A; 
   &::placeholder {
     color: #5A5A5A; 
