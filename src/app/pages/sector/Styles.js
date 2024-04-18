@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-`;
+`
 
 export const FormWrapper = styled.div`
   width: 70%; 
@@ -24,14 +24,14 @@ export const FormWrapper = styled.div`
   border: 1px solid #D3D3D3;
   margin: auto;
   flex-grow: 1;
-`;
+`
 
 export const FormContainer = styled.form`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const Label = styled.label`
   width: 45%;
@@ -39,7 +39,7 @@ export const Label = styled.label`
   margin: 10px;
   display: flex;
   align-items: center;
-`;
+`
 
 export const Input = styled.input`
   width: 100%;
@@ -53,13 +53,13 @@ export const Input = styled.input`
   &::placeholder {
     color: #5A5A5A;
   }
-`;
+`
 
 export const ButtonContainer = styled.div`
   position: absolute;
   bottom: 20px;
   right: 20px;
-`;
+`
 
 export const SubmitButton = styled.button`
   background-color: #151F6D;
@@ -69,7 +69,7 @@ export const SubmitButton = styled.button`
   border-radius: 3px;
   cursor: pointer;
   margin-right: 10px;
-`;
+`
 
 export const ClearButton = styled.button`
   background-color: #E2E2E2;
@@ -78,7 +78,7 @@ export const ClearButton = styled.button`
   padding: 15px 20px;
   border-radius: 3px;
   cursor: pointer;
-`;
+`
 
 export const SubHeaderWrapper = styled.div`
   margin-bottom: 23.5px;
@@ -95,8 +95,8 @@ export const SubHeaderWrapper = styled.div`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   font-size: 25px;
   border-radius: 0;
-`;
+`
 
 export const HeaderSpacer = styled.div`
   margin-bottom: 23.5px;
-`;
+`

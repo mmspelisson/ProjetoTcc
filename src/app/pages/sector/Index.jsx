@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import Header from "../../shared/components/header/Index.jsx";
 import Sidebar from "../../shared/components/sidebar/Index.jsx";
 import CadastroSetor from "./CadastroSetor.jsx";
@@ -13,4 +13,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Register

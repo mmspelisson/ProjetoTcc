@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, FormWrapper, FormContainer, Label, Input, Select, LargeInput, ButtonContainer, SubmitButton, ClearButton, SubHeaderWrapper, HeaderSpacer } from './Styles'; // Importando os estilos do arquivo Styles.js
+import React, { useState } from 'react'
+import { Container, FormWrapper, FormContainer, Label, Input, Select, LargeInput, ButtonContainer, SubmitButton, ClearButton, SubHeaderWrapper, HeaderSpacer } from './Styles'
 
 function CadastroUsuario() {
     const [login, setLogin] = useState('');
@@ -12,7 +12,7 @@ function CadastroUsuario() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Dados do usuário cadastrado:', { login, senha, nome, setor, liberacoes, contato, cidadeUF });
+        console.log('Dados do usuário cadastrado:', { login, senha, nome, setor, liberacoes, contato, cidadeUF })
     }
 
     const handleLimpar = () => {
@@ -39,19 +39,15 @@ function CadastroUsuario() {
                         <Input type="text" value={login} onChange={(e) => setLogin(e.target.value)} placeholder="Login" required />
                     </Label>
                     <Label>
-
                         <Input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} placeholder="Senha" required />
                     </Label>
                     <HeaderSpacer height="16px" />
                     <Label>
-
                         <Input type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Nome completo" required />
                     </Label>
                     <Label>
-
                         <Select value={setor} onChange={(e) => setSetor(e.target.value)} required>
                             <option value="">Selecione o setor</option>
-
                         </Select>
                     </Label>
                     <Label>
@@ -61,11 +57,9 @@ function CadastroUsuario() {
                     </Label>
                     <HeaderSpacer height="16px" />
                     <Label>
-
                         <Input type="text" value={contato} onChange={(e) => setContato(e.target.value)} placeholder="Contato" required />
                     </Label>
                     <Label>
-
                         <LargeInput type="text" value={cidadeUF} onChange={(e) => setCidadeUF(e.target.value)} placeholder="Cidade/UF*" required />
                     </Label>
                 </FormContainer>
@@ -79,4 +73,4 @@ function CadastroUsuario() {
     )
 }
 
-export default CadastroUsuario;
+export default CadastroUsuario

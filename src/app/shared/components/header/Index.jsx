@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa';
-import { Link } from 'react-router-dom'; // Importe o componente Link para criar links internos
-import Sidebar from '../sidebar/Index.jsx';
-import Logo from "../../../assets/our-plan-logo.svg";
-import { Container } from './Styles.js';
+import React, { useState } from 'react'
+import { FaBars } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import Sidebar from '../sidebar/Index.jsx'
+import Logo from "../../../assets/our-plan-logo.svg"
+import { Container } from './Styles.js'
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -11,7 +11,7 @@ const Header = () => {
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
     document.body.classList.toggle('sidebar-open');
-  };
+  }
 
   return (
     <Container>
@@ -21,7 +21,7 @@ const Header = () => {
       </Link>
       {sidebarOpen && <Sidebar active={setSidebarOpen} />}
     </Container>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

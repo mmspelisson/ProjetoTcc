@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FormWrapper, FormContainer, Label, Input, ButtonContainer, SubmitButton, ClearButton, SubHeaderWrapper, HeaderSpacer } from './Styles'; // Importando os estilos do arquivo Styles.js
+import React, { useState } from 'react'
+import { FormWrapper, FormContainer, Label, Input, ButtonContainer, SubmitButton, ClearButton, SubHeaderWrapper, HeaderSpacer } from './Styles'
 
 function CadastroSetor() {
     const [codigo, setCodigo] = useState('101');
@@ -40,4 +40,4 @@ function CadastroSetor() {
     )
 }
 
-export default CadastroSetor;
+export default CadastroSetor

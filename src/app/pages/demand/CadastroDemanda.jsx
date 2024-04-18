@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, FormWrapper, FormContainer, Label, Input, Select, LargeInput, ButtonContainer, SubmitButton, ClearButton, SubHeaderWrapper, HeaderSpacer } from './Styles'; // Importando os estilos do arquivo Styles.js
+import React, { useState } from 'react'
+import { Container, FormWrapper, FormContainer, Label, Input, Select, LargeInput, ButtonContainer, SubmitButton, ClearButton, SubHeaderWrapper, HeaderSpacer } from './Styles'
 
 function CadastroDemanda() {
     const [demanda, setDemanda] = useState('1085');
@@ -13,7 +13,7 @@ function CadastroDemanda() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Dados da demanda cadastrada:', { demanda, solicitante, tipo, descricao, baixa, media, alta, critica });
+        console.log('Dados da demanda cadastrada:', { demanda, solicitante, tipo, descricao, baixa, media, alta, critica })
     }
 
     const handleLimpar = () => {
@@ -34,26 +34,20 @@ function CadastroDemanda() {
             <FormWrapper>
                 <FormContainer onSubmit={handleSubmit}>
                     <Label>
-                        
                         <Input type="text" value={demanda} readOnly />
                     </Label>
                     <Label>
-                        
                         <Input type="text" value={solicitante} readOnly />
                     </Label>
                     <Label>
-                        
                         <Select value={tipo} onChange={(e) => setTipo(e.target.value)} required>
                             <option value="">Selecione o tipo</option>
-                            {/* Adicione opções do select aqui */}
                         </Select>
                     </Label>
                     <Label>
-                        
                         <LargeInput type="text" value={descricao} onChange={(e) => setDescricao(e.target.value)} placeholder="Descrição" required />
                     </Label>
                     <Label>
-                        
                         <div style={{ display: 'flex', gap: '16px' }}>
                             <input type="checkbox" checked={baixa} onChange={(e) => setBaixa(e.target.checked)} />
                             <label htmlFor="baixa">Baixa</label>
@@ -76,4 +70,4 @@ function CadastroDemanda() {
     )
 }
 
-export default CadastroDemanda;
+export default CadastroDemanda
