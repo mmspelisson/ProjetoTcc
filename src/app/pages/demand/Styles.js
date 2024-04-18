@@ -20,7 +20,7 @@ export const FormWrapper = styled.div`
   justify-content: center;
   padding: 20px;
   position: relative;
-  border-radius: 10px;
+  border-radius: 0px;
   border: 1px solid #D3D3D3;
   margin: auto;
   flex-grow: 1;
@@ -111,7 +111,7 @@ export const ClearButton = styled.button`
 export const SubHeaderWrapper = styled.div`
   margin-bottom: 23.5px;
   width: 70%;
-  height: 37px;
+  height: 39px;
   margin: auto;
   margin-bottom: 23.5px;
   background-color: #151F6D;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Container, FormWrapper, FormContainer, Label, Input, Select, LargeInput, ButtonContainer, SubmitButton, ClearButton, SubHeaderWrapper, HeaderSpacer } from './Styles'
+import Modal from '../../shared/components/modal/Modal'
 
 function CadastroUsuario() {
     const [login, setLogin] = useState('');
@@ -9,10 +10,18 @@ function CadastroUsuario() {
     const [liberacoes, setLiberacoes] = useState('');
     const [contato, setContato] = useState('');
     const [cidadeUF, setCidadeUF] = useState('');
+    const [showModal, setShowModal] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Dados do usuário cadastrado:', { login, senha, nome, setor, liberacoes, contato, cidadeUF })
+        setLogin('');
+        setSenha('');
+        setNome('');
+        setSetor('');
+        setLiberacoes('');
+        setContato('');
+        setCidadeUF('');
     }
 
     const handleLimpar = () => {
@@ -23,6 +32,10 @@ function CadastroUsuario() {
         setLiberacoes('');
         setContato('');
         setCidadeUF('');
+    }
+
+    const closeModal = () => {
+        setShowModal(false);
     }
 
     return (
