@@ -6,7 +6,7 @@ import Register from "./app/pages/registerUsers/Index.jsx"
 import Demand from "./app/pages/demand/Index.jsx"
 import MyGlobalStyles from "./app/styles/globalStyles.js"
 import Sector from "./app/pages/sector/Index.jsx"
-import KanbanBoard from "./app/shared/components/kanbanBoard/KanbanBoard.jsx" // Importe o componente KanbanBoard
+import KanbanBoard from "./app/shared/components/kanbanBoard/KanbanBoard.jsx"
 
 
 export function App() {
