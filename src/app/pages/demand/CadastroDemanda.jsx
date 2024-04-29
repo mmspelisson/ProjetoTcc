@@ -48,6 +48,7 @@ function CadastroDemanda() {
                         <LargeInput type="text" value={descricao} onChange={(e) => setDescricao(e.target.value)} placeholder="Descrição" required />
                     </Label>
                     <Label>
+                        
                         <div style={{ display: 'flex', gap: '16px' }}>
                             <input type="checkbox" checked={baixa} onChange={(e) => setBaixa(e.target.checked)} />
                             <label htmlFor="baixa">Baixa</label>
@@ -58,6 +59,7 @@ function CadastroDemanda() {
                             <input type="checkbox" checked={critica} onChange={(e) => setCritica(e.target.checked)} />
                             <label htmlFor="critica">Crítica</label>
                         </div>
+
                     </Label>
                 </FormContainer>
                 <ButtonContainer>

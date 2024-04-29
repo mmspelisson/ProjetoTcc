@@ -7,6 +7,8 @@ import Demand from "./app/pages/demand/Index.jsx"
 import MyGlobalStyles from "./app/styles/globalStyles.js"
 import Sector from "./app/pages/sector/Index.jsx"
 import KanbanBoard from "./app/pages/kanbanboard/Kanban.jsx"
+import Header from "./app/shared/components/header/Index.jsx"
+import TrelloCard from "./app/shared/components/card/Card.jsx"
 
 export function App() {
     return (
