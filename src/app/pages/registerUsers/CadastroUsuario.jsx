@@ -14,15 +14,37 @@ function CadastroUsuario() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Dados do usuário cadastrado:', { login, senha, nome, setor, liberacoes, contato, cidadeUF })
-        setLogin('');
-        setSenha('');
-        setNome('');
-        setSetor('');
-        setLiberacoes('');
-        setContato('');
-        setCidadeUF('');
-    }
+        const userData = { login, senha, nome, setor, liberacoes, contato, cidadeUF };
+
+        fetch('/api/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao cadastrar usuário');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Usuário cadastrado com sucesso:', data);
+                // Limpar campos do formulário após o cadastro
+                setLogin('');
+                setSenha('');
+                setNome('');
+                setSetor('');
+                setLiberacoes('');
+                setContato('');
+                setCidadeUF('');
+            })
+            .catch(error => {
+                console.error('Erro ao cadastrar usuário:', error);
+                // Lidar com o erro, exibir uma mensagem de erro ou fazer algo apropriado
+            });
+    };
 
     const handleLimpar = () => {
         setLogin('');
@@ -32,11 +54,11 @@ function CadastroUsuario() {
         setLiberacoes('');
         setContato('');
         setCidadeUF('');
-    }
+    };
 
     const closeModal = () => {
         setShowModal(false);
-    }
+    };
 
     return (
         <>
@@ -65,7 +87,7 @@ function CadastroUsuario() {
                     </Label>
                     <Label>
                         <Select value={liberacoes} onChange={(e) => setLiberacoes(e.target.value)} required>
-                            <option value="">Selecione as liberações</option>
+                            <option value="">Selecione as liberações</option>p
                         </Select>
                     </Label>
                     <HeaderSpacer height="16px" />

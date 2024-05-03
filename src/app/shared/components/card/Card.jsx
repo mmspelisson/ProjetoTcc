@@ -1,9 +1,15 @@
-import React from 'react'
-import cardStyles from './Styles'
+import React from 'react';
+import cardStyles from './Styles';
 
-const TrelloCard = ({ title, description }) => {
+const TrelloCard = ({ title, description, onClick }) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick({ title, description });
+    }
+  };
+
   return (
-    <div style={cardStyles.card}>
+    <div style={cardStyles.card} onClick={handleClick}>
       <div style={cardStyles.header}>
         <h3>{title}</h3>
       </div>
@@ -11,7 +17,7 @@ const TrelloCard = ({ title, description }) => {
         <p>{description}</p>
       </div>
     </div>
-  )
+  );
 }
 
 export default TrelloCard;

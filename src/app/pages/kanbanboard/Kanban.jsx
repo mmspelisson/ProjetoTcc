@@ -1,8 +1,9 @@
-import React from 'react';
 import Header from '../../shared/components/header/Index';
 import Sidebar from '../../shared/components/sidebar/Index';
-import TrelloCard from '../../shared/components/card/Card'; // Importe o componente de card
+import TrelloCard from '../../shared/components/card/Card'; 
 import './Styles.css';
+import CardModal from '../../shared/components/modal/Modal';
+import React, { useState } from 'react';
 
 const UserFilter = ({ userType }) => {
     return (
@@ -13,6 +14,18 @@ const UserFilter = ({ userType }) => {
 }
 
 const KanbanBoard = () => {
+    const [selectedCard, setSelectedCard] = useState(null);
+
+const handleCardClick = (card) => {
+    setSelectedCard(card);
+}
+
+const handleCloseModal = () => {
+    setSelectedCard(null);
+}
+
+
+
     return (
         <div>
             <Header />
@@ -86,8 +99,9 @@ const KanbanBoard = () => {
                     </div>
                 </div>
             </div>
+            {selectedCard && <CardModal card={selectedCard} onClose={handleCloseModal} />}
         </div>
     )
 }
 
-export default KanbanBoard;
+export default KanbanBoard

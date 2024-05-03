@@ -1,14 +1,16 @@
 import React from 'react';
+import '../modal/Styles'
 
-const Modal = ({ showModal, closeModal }) => {
+const CardModal = ({ card, onClose }) => {
   return (
-    <div className={`modal ${showModal ? 'show' : ''}`}>
-      <div className="modal-content">
-        <span className="close" onClick={closeModal}>&times;</span>
-        <p>Usuário cadastrado com sucesso!</p>
+    <div className="card-modal">
+      <div className="card-modal-content">
+        <h2>{card.title}</h2>
+        <p>{card.description}</p>
+        <button onClick={onClose}>Fechar</button>
       </div>
     </div>
   );
 }
 
-export default Modal;
+export default CardModal;

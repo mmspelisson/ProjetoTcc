@@ -42,6 +42,12 @@ function CadastroDemanda() {
                     <Label>
                         <Select value={tipo} onChange={(e) => setTipo(e.target.value)} required>
                             <option value="">Selecione o tipo</option>
+                            <option value="">Hotfix</option>
+                            <option value="">Suporte</option>
+                            <option value="">Banco</option>
+                            <option value ="">Reconfiguração</option>
+                            <option value ="">Feature</option>
+
                         </Select>
                     </Label>
                     <Label>
